@@ -1,0 +1,22 @@
+﻿@page
+@model Registration.Pages.OneModel
+@{}
+
+<h1 class="display-4">Форма записи на посещение мероприятия</h1>
+
+<div class="align-text-top">
+	<input type="date" /> <input type="date" />
+    @{
+        List<SelectListItem> listItems = new List<SelectListItem>();
+        listItems.Add(new SelectListItem
+     {
+         Text = "AtlantaPort",
+         Value = "AtlantaPort"
+     });
+     Html.DropDownList("yourDropName", listItems, new { @class = "form-control" }); 
+    }
+</div>
+
+<div class="align-bottom">
+    <button type="button">Добавить</button>
+</div>
